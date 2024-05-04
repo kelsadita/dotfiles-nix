@@ -6,6 +6,7 @@
             pkgs.neovim
             pkgs.git
             pkgs.coreutils
+            pkgs.rustup
           ];
         systemPath = [ "/opt/homebrew/bin" ];
         pathsToLink = [ "/Applications" ];
