@@ -20,7 +20,11 @@
       enable = true;
       enableZshIntegration = true;
     };
-    git.enable = true;
+    git = {
+      enable = true;
+      userName = "Kalpesh Adhatrao";
+      userEmail = "kalpesh.adhatrao@gmail.com";
+    };
     eza.enable = true;
     zsh =  {
       enable = true;
