@@ -51,7 +51,7 @@
           caskArgs.no_quarantine = true;
           global.brewfile = true;
           taps = [ "homebrew/cask-fonts" ];
-          casks = [ "raycast" "amethyst" "font-zed-mono-nerd-font" "google-chrome" ];
+          casks = [ "raycast" "amethyst" "font-zed-mono-nerd-font" "google-chrome" "todoist" ];
         };
     }
 

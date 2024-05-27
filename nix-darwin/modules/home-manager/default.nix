@@ -12,6 +12,9 @@
     file.".inputrc".source = ./dotfiles/inputrc;
   };
   programs = {
+    zellij = {
+      enable = true;
+    };
     bat = {
       enable = true;
       config.theme = "TwoDark";
@@ -32,9 +35,10 @@
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
       shellAliases = {
-        ls = "ls --color=auto -F";
+        ls = "eza";
         nixswitch = "darwin-rebuild switch --flake ~/.config/nix-darwin/flake.nix";
         vim = "nvim";
+        cat = "bat";
       };
     };
     starship = {
@@ -43,9 +47,11 @@
     };
     alacritty = {
       enable = true;
-      settings.font = {
+      settings = {
+        font = {
           size = 16;
           normal.family = "ZedMono Nerd Font";
+        };
       };
     };
     wezterm = {
@@ -60,9 +66,10 @@
         -- This is where you actually apply your config choices
 
         -- For example, changing the color scheme:
-        config.color_scheme = 'Batman'
+        config.color_scheme = 'nord'
 
         config.font = wezterm.font "ZedMono Nerd Font"
+        config.font_size = 16.0
 
         -- and finally, return the configuration to wezterm
         return config
