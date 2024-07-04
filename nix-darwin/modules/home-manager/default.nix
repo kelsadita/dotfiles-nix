@@ -3,7 +3,7 @@
 {
   home = {
     stateVersion = "24.05";
-    packages = [ pkgs.ripgrep pkgs.fd pkgs.curl pkgs.less pkgs.kitty pkgs.obsidian pkgs.rustup pkgs.texliveFull ];
+    packages = [ pkgs.ripgrep pkgs.fd pkgs.curl pkgs.less pkgs.kitty pkgs.obsidian pkgs.rustup pkgs.texliveFull pkgs.jetbrains.idea-community ];
     sessionVariables = {
       PAGER = "less";
       CLICOLOR = 1;

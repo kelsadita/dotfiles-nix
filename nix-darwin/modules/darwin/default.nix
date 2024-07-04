@@ -7,6 +7,7 @@
             pkgs.git
             pkgs.coreutils
             pkgs.rustup
+            pkgs.tree
           ];
         systemPath = [ "/opt/homebrew/bin" ];
         pathsToLink = [ "/Applications" ];
