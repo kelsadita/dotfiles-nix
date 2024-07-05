@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{ pkgs, ... }:
 
 {
   home = {
@@ -12,7 +12,7 @@
       pkgs.obsidian
       pkgs.rustup
       pkgs.texliveFull
-      pkgs.jetbrains.idea-community 
+      pkgs.jetbrains.idea-community
     ];
     sessionVariables = {
       PAGER = "less";
@@ -22,9 +22,7 @@
     file.".inputrc".source = ./dotfiles/inputrc;
   };
   programs = {
-    zellij = {
-      enable = true;
-    };
+    zellij = { enable = true; };
     bat = {
       enable = true;
       config.theme = "TwoDark";
@@ -39,14 +37,15 @@
       userEmail = "kalpesh.adhatrao@gmail.com";
     };
     eza.enable = true;
-    zsh =  {
+    zsh = {
       enable = true;
       enableCompletion = true;
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
       shellAliases = {
         ls = "eza";
-        nixswitch = "darwin-rebuild switch --flake ~/.config/nix-darwin/flake.nix";
+        nixswitch =
+          "darwin-rebuild switch --flake ~/.config/nix-darwin/flake.nix";
         vim = "nvim";
         cat = "bat";
       };

@@ -12,24 +12,20 @@
 
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager }:
-  {
+  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager }: {
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#Kalpeshs-MacBook-Air
     darwinConfigurations."Kalpeshs-MacBook-Air" = nix-darwin.lib.darwinSystem {
       modules = [
 
         ./modules/darwin
-        {
-            _module.args = { inherit self; };
-        }
+        { _module.args = { inherit self; }; }
 
-        home-manager.darwinModules.home-manager {
+        home-manager.darwinModules.home-manager
+        {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.kelsadita.imports = [
-            ./modules/home-manager
-          ];
+          home-manager.users.kelsadita.imports = [ ./modules/home-manager ];
         }
       ];
     };
