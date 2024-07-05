@@ -3,7 +3,17 @@
 {
   home = {
     stateVersion = "24.05";
-    packages = [ pkgs.ripgrep pkgs.fd pkgs.curl pkgs.less pkgs.kitty pkgs.obsidian pkgs.rustup pkgs.texliveFull pkgs.jetbrains.idea-community ];
+    packages = [
+      pkgs.ripgrep
+      pkgs.fd
+      pkgs.curl
+      pkgs.less
+      pkgs.kitty
+      pkgs.obsidian
+      pkgs.rustup
+      pkgs.texliveFull
+      pkgs.jetbrains.idea-community 
+    ];
     sessionVariables = {
       PAGER = "less";
       CLICOLOR = 1;
@@ -44,15 +54,6 @@
     starship = {
       enable = true;
       enableZshIntegration = true;
-    };
-    alacritty = {
-      enable = true;
-      settings = {
-        font = {
-          size = 16;
-          normal.family = "ZedMono Nerd Font";
-        };
-      };
     };
     wezterm = {
       enable = true;

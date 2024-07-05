@@ -29,7 +29,7 @@
         configurationRevision = self.rev or self.dirtyRev or null;
         stateVersion = 4;
         keyboard.enableKeyMapping = true;
-        defaults.NSGlobalDomain.InitialKeyRepeat = 10;
+        defaults.NSGlobalDomain.InitialKeyRepeat = 14;
         defaults.NSGlobalDomain.KeyRepeat = 1;
       };
 
@@ -51,8 +51,8 @@
           enable = true;
           caskArgs.no_quarantine = true;
           global.brewfile = true;
-          taps = [ "homebrew/cask-fonts" ];
-          casks = [ "raycast" "amethyst" "font-zed-mono-nerd-font" "google-chrome" "todoist" ];
+          #taps = [ "homebrew/cask-fonts" ];
+          casks = [ "raycast" "amethyst" "font-zed-mono-nerd-font" "google-chrome" "todoist" "arc" "lm-studio" ];
         };
     }
 
