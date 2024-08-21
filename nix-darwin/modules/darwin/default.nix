@@ -60,6 +60,8 @@
       "todoist"
       "arc"
       "lm-studio"
+      "notion"
+      "nikitabobko/tap/aerospace"
     ];
   };
 }
